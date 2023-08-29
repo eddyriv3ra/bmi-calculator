@@ -1,0 +1,39 @@
+// breakpoints by https://getbootstrap.com/docs/5.0/layout/breakpoints/
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == md {
+    @media (max-width: $sm) {
+      @content;
+    } //768px
+  }
+
+  @if $breakpoint == md {
+    @media (max-width: $md) {
+      @content;
+    } //768px
+  }
+
+  @if $breakpoint == lg {
+    @media (max-width: $lg) {
+      @content;
+    } //992px
+  }
+
+  @if $breakpoint == xl {
+    @media (max-width: $xl) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint == xxl {
+    @media (max-width: $xxl) {
+      @content;
+    } //1400px
+  }
+}
