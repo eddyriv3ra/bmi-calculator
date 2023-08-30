@@ -24,7 +24,9 @@ const MainPage = () => {
               point to evaluate your overall health and well-being.
             </p>
           </div>
-          <div className={styles.calculatorContainer}></div>
+          <div className={styles.calculatorContainer}>
+            <p className={styles.calcTitle}>Enter your details below</p>
+          </div>
         </div>
       </div>
     </div>
