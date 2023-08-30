@@ -1,8 +1,27 @@
 import React from 'react';
 import Image from 'next/image';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
 import styles from './MainPage.module.scss';
+import Typography from '@mui/material/Typography';
 
 const MainPage = () => {
+  const [selectedValue, setSelectedValue] = React.useState('a');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
+  };
+
+  const controlProps = (item: string) => ({
+    checked: selectedValue === item,
+    onChange: handleChange,
+    value: item,
+    name: 'color-radio-button-demo',
+    inputProps: { 'aria-label': item },
+  });
+
   return (
     <div>
       <div className={styles.bodyMass}>
@@ -26,6 +45,101 @@ const MainPage = () => {
           </div>
           <div className={styles.calculatorContainer}>
             <p className={styles.calcTitle}>Enter your details below</p>
+            <FormControl
+              style={{
+                display: 'flex',
+                width: '100%',
+              }}
+            >
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                defaultValue="metric"
+                name="radio-buttons-group"
+                onChange={handleChange}
+                row
+                style={{ width: '100%', gap: 24 }}
+              >
+                <FormControlLabel
+                  value="metric"
+                  control={
+                    <Radio
+                      {...controlProps('a')}
+                      sx={{
+                        padding: 0,
+                      }}
+                      icon={
+                        <Image
+                          src="/images/radio-button-selected.svg"
+                          alt="radio-button-selected"
+                          width={25}
+                          height={25}
+                        />
+                      }
+                      checkedIcon={
+                        <Image
+                          src="/images/radio-button.svg"
+                          alt="radio-button"
+                          width={25}
+                          height={25}
+                        />
+                      }
+                    />
+                  }
+                  style={{ width: 238, margin: 0, gap: 18 }}
+                  label={
+                    <Typography
+                      style={{
+                        fontWeight: '600',
+                        lineHeight: '150%',
+                        color: '#253347',
+                        margin: 0,
+                      }}
+                    >
+                      Metric
+                    </Typography>
+                  }
+                />
+                <FormControlLabel
+                  value="imperial"
+                  control={
+                    <Radio
+                      {...controlProps('b')}
+                      sx={{
+                        padding: 0,
+                      }}
+                      icon={
+                        <Image
+                          src="/images/radio-button-selected.svg"
+                          alt="radio-button-selected"
+                          width={25}
+                          height={25}
+                        />
+                      }
+                      checkedIcon={
+                        <Image
+                          src="/images/radio-button.svg"
+                          alt="radio-button"
+                          width={25}
+                          height={25}
+                        />
+                      }
+                    />
+                  }
+                  style={{ width: 238, margin: 0, gap: 18 }}
+                  label={
+                    <Typography
+                      style={{
+                        fontWeight: '600',
+                        lineHeight: '150%',
+                        color: '#253347',
+                      }}
+                    >
+                      Imperial
+                    </Typography>
+                  }
+                />
+              </RadioGroup>
+            </FormControl>
           </div>
         </div>
       </div>

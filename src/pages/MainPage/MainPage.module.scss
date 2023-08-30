@@ -8,62 +8,63 @@
   position: relative;
   top: -1px;
   left: 24px;
-}
 
-.gameIcon {
-  position: absolute;
-  top: 74px;
-  left: 116px;
-}
-
-.centerContainer {
-  position: absolute;
-  top: 182px;
-  left: 116px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-
-  .boxText {
-    display: flex;
-    width: 564px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 35px;
-
-    .mainText {
-      font-weight: 600;
-      line-height: 110%; /* 70.4px */
-      letter-spacing: -3.2px;
-      font-size: var(--heading-extra-large);
-      color: colors.$gunMetal;
-      width: 470px;
-    }
-
-    .mainDesc {
-      width: 465px;
-      height: 96px;
-      color: colors.$darkElectricBlue;
-      line-height: 150%; /* 24px */
-    }
+  .gameIcon {
+    position: absolute;
+    top: 74px;
+    left: 116px;
   }
 
-  .calculatorContainer {
-    width: 564px;
-    height: 448px;
-    padding: 32px;
-    flex-direction: column;
-    align-items: flex-start;
+  .centerContainer {
+    position: absolute;
+    top: 182px;
+    left: 116px;
+    display: flex;
+    align-items: center;
     gap: 32px;
-    border-radius: 16px;
-    background: colors.$pureWhite;
-    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
 
-    .calcTitle {
-      font-size: var(--heading-medium);
-      font-weight: 600;
-      letter-spacing: -1.2px;
-      color: colors.$gunMetal;
+    .boxText {
+      display: flex;
+      width: 564px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 35px;
+
+      .mainText {
+        font-weight: 600;
+        line-height: 110%; /* 70.4px */
+        letter-spacing: -3.2px;
+        font-size: var(--heading-extra-large);
+        color: colors.$gunMetal;
+        width: 470px;
+      }
+
+      .mainDesc {
+        width: 465px;
+        height: 96px;
+        color: colors.$darkElectricBlue;
+        line-height: 150%; /* 24px */
+      }
+    }
+
+    .calculatorContainer {
+      display: flex;
+      width: 564px;
+      height: 448px;
+      padding: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      border-radius: 16px;
+      background: colors.$pureWhite;
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+      .calcTitle {
+        font-size: var(--heading-medium);
+        font-weight: 600;
+        letter-spacing: -1.2px;
+        color: colors.$gunMetal;
+      }
     }
   }
 }
