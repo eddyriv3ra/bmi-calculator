@@ -68,3 +68,9 @@
     }
   }
 }
+
+.radio {
+  &:hover {
+    outline: 1px solid colors.$blue;
+  }
+}

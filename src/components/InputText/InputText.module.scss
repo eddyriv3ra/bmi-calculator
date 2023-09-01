@@ -1,0 +1,44 @@
+@use '@/styles/abstracts/colors';
+
+.label {
+  font-size: var(--body-small);
+  color: colors.$darkElectricBlue;
+  line-height: var(--body-line-height);
+}
+
+.inputContainer {
+  position: relative;
+  margin-top: 8px;
+
+  .rightText {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    top: 20px;
+    font-size: var(--heading-medium);
+    letter-spacing: -1.2px;
+    font-weight: 600;
+    color: colors.$blue;
+  }
+
+  .input {
+    width: 238px;
+    height: 69px;
+    border-radius: 12px;
+    border: 1px solid #d8e2e7;
+    padding: 20px 24px;
+    color: colors.$gunMetal;
+    font-size: var(--heading-medium);
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    opacity: 0.25;
+
+    &:focus {
+      border-color: colors.$blue;
+    }
+  }
+
+  .text {
+    opacity: 1;
+  }
+}

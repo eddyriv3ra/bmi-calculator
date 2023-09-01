@@ -4,11 +4,23 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import styles from './MainPage.module.scss';
 import Typography from '@mui/material/Typography';
+import styles from './MainPage.module.scss';
+import InputText from '@/components/InputText/InputText';
 
 const MainPage = () => {
   const [selectedValue, setSelectedValue] = React.useState('a');
+  const [values, setValues] = React.useState({
+    height: 0,
+    weight: 0,
+  });
+
+  const handleValues = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
@@ -83,6 +95,7 @@ const MainPage = () => {
                           height={25}
                         />
                       }
+                      className={styles.radio}
                     />
                   }
                   style={{ width: 238, margin: 0, gap: 18 }}
@@ -92,7 +105,6 @@ const MainPage = () => {
                         fontWeight: '600',
                         lineHeight: '150%',
                         color: '#253347',
-                        margin: 0,
                       }}
                     >
                       Metric
@@ -106,6 +118,7 @@ const MainPage = () => {
                       {...controlProps('b')}
                       sx={{
                         padding: 0,
+                        transition: 'all 2s',
                       }}
                       icon={
                         <Image
@@ -140,6 +153,26 @@ const MainPage = () => {
                 />
               </RadioGroup>
             </FormControl>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                width: '100%',
+              }}
+            >
+              <InputText
+                label="Height"
+                setValue={handleValues}
+                value={values.height}
+                inputName="height"
+              />
+              <InputText
+                label="Weight"
+                setValue={handleValues}
+                value={values.weight}
+                inputName="weight"
+              />
+            </div>
           </div>
         </div>
       </div>
