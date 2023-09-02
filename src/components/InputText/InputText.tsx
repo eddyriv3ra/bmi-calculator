@@ -1,13 +1,22 @@
 import styles from './InputText.module.scss';
 
 interface IInputText {
-  label: string;
+  label?: string;
   value: string | number;
   setValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
   inputName: string;
+  unit: string;
+  className?: string | undefined;
 }
 
-const InputText = ({ label, value, setValue, inputName }: IInputText) => {
+const InputText = ({
+  label,
+  value,
+  setValue,
+  inputName,
+  unit,
+  className,
+}: IInputText) => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const enteredValue = event.target.value;
     if (
@@ -20,14 +29,14 @@ const InputText = ({ label, value, setValue, inputName }: IInputText) => {
   };
 
   return (
-    <div>
+    <div className={className}>
       {label ? (
         <label className={styles.label} htmlFor="input-text">
           {label}
         </label>
       ) : null}
       <div className={styles.inputContainer}>
-        <span className={styles.rightText}>cm</span>
+        <span className={styles.rightText}>{unit}</span>
         <input
           className={`${styles.input} ${value ? styles.text : ''}`}
           type="text"
