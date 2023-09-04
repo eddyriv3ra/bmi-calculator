@@ -5,7 +5,6 @@ interface IResultDisplay {
 }
 
 const ResultDisplay = ({ bmi }: IResultDisplay) => {
-  console.log({ bmi });
   const bmiCategories = () => {
     switch (true) {
       case bmi < 18.5: {
@@ -26,7 +25,11 @@ const ResultDisplay = ({ bmi }: IResultDisplay) => {
   };
 
   return (
-    <div className={styles.resultsContainer}>
+    <div
+      className={`${styles.resultsContainer} ${
+        bmi ? styles.resultsWithBmi : ''
+      }`}
+    >
       {bmi ? (
         <div className={styles.result}>
           <div className={styles.leftDesc}>

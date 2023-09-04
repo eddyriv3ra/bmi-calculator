@@ -2,11 +2,14 @@
 
 .resultsContainer {
   width: 100%;
-  height: 166px;
+  height: 130px;
   padding: 32px;
   border-radius: 16px 999px 999px 16px;
   background: linear-gradient(90deg, colors.$blue 0%, #587dff 100%);
   color: colors.$pureWhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .heading {
     font-size: var(--heading-medium);
@@ -48,4 +51,8 @@
       font-size: var(--body-small);
     }
   }
+}
+
+.resultsWithBmi {
+  height: 166px;
 }

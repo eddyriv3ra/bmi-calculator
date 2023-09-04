@@ -24,7 +24,9 @@ const useCalculateBMI = ({ metric, imperial, unitSystem }: Props) => {
       if (unitSystem === 'metric') {
         const { cm, kg } = metric;
         bmiValue = (kg / cm / cm) * 10000;
-        !isNaN(bmiValue) && setBMI(Number(bmiValue.toFixed(1)));
+        bmiValue !== Infinity &&
+          !isNaN(bmiValue) &&
+          setBMI(Number(bmiValue.toFixed(1)));
       } else {
         const { ft, lbs, st, inc } = imperial;
         const inches = ft * 12 + inc;

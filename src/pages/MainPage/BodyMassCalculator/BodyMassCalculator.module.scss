@@ -1,0 +1,123 @@
+@use '@/styles/abstracts/colors';
+
+.bodyMass {
+  width: 978px;
+  height: 737px;
+  background: linear-gradient(315deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%);
+  border-radius: 0px 0px 35px 35px;
+  position: relative;
+  top: -1px;
+  left: 15rem;
+
+  .boxText {
+    display: flex;
+    width: 564px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    position: absolute;
+    top: 266px;
+    left: 116px;
+
+    .mainText {
+      font-weight: 600;
+      line-height: 110%; /* 70.4px */
+      letter-spacing: -3.2px;
+      font-size: var(--heading-extra-large);
+      color: colors.$gunMetal;
+      width: 470px;
+    }
+
+    .mainDesc {
+      width: 465px;
+      height: 96px;
+      color: colors.$darkElectricBlue;
+      line-height: 150%; /* 24px */
+    }
+  }
+
+  .gameIcon {
+    position: absolute;
+    top: 74px;
+    left: 116px;
+  }
+
+  .centerContainer {
+    position: absolute;
+    top: 182px;
+    left: 712px;
+
+    .calculatorContainer {
+      display: flex;
+      width: 564px;
+      min-height: 448px;
+      padding: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      border-radius: 16px;
+      background: colors.$pureWhite;
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+      .calcTitle {
+        font-size: var(--heading-medium);
+        font-weight: 600;
+        letter-spacing: -1.2px;
+        color: colors.$gunMetal;
+      }
+
+      .formControl {
+        width: '100%';
+
+        .radioGroup {
+          width: '100%';
+          gap: 24;
+
+          .radio {
+            &:hover {
+              outline: 1px solid colors.$blue;
+            }
+          }
+        }
+      }
+
+      .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.customInputStyle {
+  display: flex;
+  align-items: flex-end;
+}
+
+.animationMetric {
+  animation: 0.3s ease-out 0s 1 slideInFromBottom;
+}
+
+.animationImperial {
+  animation: 0.3s ease-out 0s 1 slideInFromBottomImp;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottomImp {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
