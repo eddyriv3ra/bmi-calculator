@@ -10,7 +10,7 @@ import {
 import InputText from '@/components/InputText/InputText';
 import ResultDisplay from '@/components/ResultDisplay/ResultDisplay';
 import useCalculateBMI from '@/hooks/useCalculateBMI';
-import styles from './BodyMassCalculator.module.scss';
+import styles from './FirstSection.module.scss';
 
 const defaultValues = {
   metric: {
@@ -25,7 +25,7 @@ const defaultValues = {
   },
 };
 
-const MainPage = () => {
+const FirstSection = () => {
   const [selectedValue, setSelectedValue] = React.useState<
     'metric' | 'imperial'
   >('metric');
@@ -234,4 +234,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default FirstSection;
