@@ -11,31 +11,38 @@ import InputText from '@/components/InputText/InputText';
 import ResultDisplay from '@/components/ResultDisplay/ResultDisplay';
 import useCalculateBMI from '@/hooks/useCalculateBMI';
 import styles from './MainPage.module.scss';
+import { useEffect } from 'react';
+
+const defaultValues = {
+  metric: {
+    cm: 0,
+    kg: 0,
+  },
+  imperial: {
+    ft: 0,
+    inc: 0,
+    st: 0,
+    lbs: 0,
+  },
+};
 
 const MainPage = () => {
   const [selectedValue, setSelectedValue] = React.useState<
     'metric' | 'imperial'
   >('metric');
-  const [values, setValues] = React.useState({
-    metric: {
-      cm: 0,
-      kg: 0,
-    },
-    imperial: {
-      ft: 0,
-      inc: 0,
-      st: 0,
-      lbs: 0,
-    },
-  });
+  const [values, setValues] = React.useState(defaultValues);
   const bmi = useCalculateBMI({ ...values, unitSystem: selectedValue });
+
+  useEffect(() => {
+    setValues(defaultValues);
+  }, [selectedValue]);
 
   const handleValues = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
       ...values,
       [selectedValue]: {
         ...values[selectedValue],
-        [e.target.name]: e.target.value,
+        [e.target.name]: Number(e.target.value),
       },
     });
   };
@@ -220,8 +227,7 @@ const MainPage = () => {
                 />
               </div>
             )}
-
-            <ResultDisplay />
+            <ResultDisplay bmi={bmi} />
           </div>
         </div>
       </div>

@@ -39,7 +39,10 @@ const InputText = ({
         <span className={styles.rightText}>{unit}</span>
         <input
           className={`${styles.input} ${value ? styles.text : ''}`}
-          type="text"
+          type="number"
+          max="12"
+          min="1"
+          maxLength={2}
           id="input-text"
           placeholder="0"
           value={value === 0 ? '' : value}
