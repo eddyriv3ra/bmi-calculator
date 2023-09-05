@@ -64,7 +64,7 @@ const FirstSection = () => {
       <div className={styles.bodyMass}>
         <div className={styles.gameIcon}>
           <Image
-            src="/images/game-icons.svg"
+            src="./images/game-icons.svg"
             alt="game-icon"
             width={64}
             height={64}
@@ -101,7 +101,7 @@ const FirstSection = () => {
                       }}
                       icon={
                         <Image
-                          src="/images/radio-button-selected.svg"
+                          src="./images/radio-button-selected.svg"
                           alt="radio-button-selected"
                           width={25}
                           height={25}
@@ -109,7 +109,7 @@ const FirstSection = () => {
                       }
                       checkedIcon={
                         <Image
-                          src="/images/radio-button.svg"
+                          src="./images/radio-button.svg"
                           alt="radio-button"
                           width={25}
                           height={25}
@@ -141,7 +141,7 @@ const FirstSection = () => {
                       }}
                       icon={
                         <Image
-                          src="/images/radio-button-selected.svg"
+                          src="./images/radio-button-selected.svg"
                           alt="radio-button-selected"
                           width={25}
                           height={25}
@@ -149,7 +149,7 @@ const FirstSection = () => {
                       }
                       checkedIcon={
                         <Image
-                          src="/images/radio-button.svg"
+                          src="./images/radio-button.svg"
                           alt="radio-button"
                           width={25}
                           height={25}
