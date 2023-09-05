@@ -11,9 +11,24 @@
   margin-top: 65px;
 
   @include respond(xl) {
-    height: auto;
+    height: 100%;
     margin-top: 20.6rem;
     gap: 75px;
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 26rem;
+    gap: 48px;
+  }
+
+  @include respond(sm) {
+    margin-top: 33rem;
+  }
+
+  @include respond(sm) {
+    margin-top: 38rem;
   }
 
   .leftSideContainer {
@@ -30,6 +45,11 @@
       padding: 0;
     }
 
+    @include respond(md) {
+      width: 375px;
+      height: 257px;
+    }
+
     .imageWrapper {
       width: 468px;
       height: 533px;
@@ -39,7 +59,12 @@
       @include respond(xl) {
         width: 360px;
         height: 411px;
-        padding: 0;
+      }
+
+      @include respond(md) {
+        width: 311px;
+        height: 354px;
+        margin-left: 32px;
       }
     }
   }
