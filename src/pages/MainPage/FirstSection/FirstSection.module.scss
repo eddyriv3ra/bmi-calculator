@@ -156,7 +156,7 @@
 
         .radioGroup {
           width: 100%;
-          gap: 24px;
+          gap: 10px;
 
           @include respond(md) {
             justify-content: space-between;
