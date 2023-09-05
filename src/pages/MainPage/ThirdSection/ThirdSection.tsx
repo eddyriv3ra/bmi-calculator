@@ -42,7 +42,6 @@ const ThirdSection = () => {
                 src={`/images/${item.iconName}.svg`}
                 width={32}
                 height={32}
-                objectFit="contain"
                 alt="bowl-food-light"
               />
             </div>

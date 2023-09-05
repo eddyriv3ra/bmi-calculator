@@ -9,8 +9,8 @@ const MainPage = () => {
     <div className={styles.mainContent}>
       <FirstSection />
       <SecondSection />
-      <ThirdSection />
-      <FourthSection />
+      {/* <ThirdSection />
+      <FourthSection /> */}
     </div>
   );
 };

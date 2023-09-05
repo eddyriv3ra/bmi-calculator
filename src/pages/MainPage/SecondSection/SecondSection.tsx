@@ -8,13 +8,10 @@ const SecondSection = () => {
         <div className={styles.imageWrapper}>
           <Image
             src="/images/image-bmi-guy.png"
-            // width={360}
-            // height={411}
             alt="guy"
             className={styles.image}
             priority
             layout="fill"
-            objectFit="contain"
           />
         </div>
       </div>

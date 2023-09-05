@@ -7,6 +7,11 @@ $xl: 1200px;
 $xxl: 1400px;
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $xs) {
+      @content;
+    } //768px
+  }
   @if $breakpoint == sm {
     @media (max-width: $sm) {
       @content;

@@ -118,7 +118,7 @@ const FirstSection = () => {
                       className={styles.radio}
                     />
                   }
-                  style={{ width: 238, margin: 0, gap: 18 }}
+                  className={styles.formControlLabel}
                   label={
                     <Typography
                       style={{
@@ -158,7 +158,7 @@ const FirstSection = () => {
                       className={styles.radio}
                     />
                   }
-                  style={{ width: 238, margin: 0, gap: 18 }}
+                  className={styles.formControlLabel}
                   label={
                     <Typography
                       style={{
@@ -183,6 +183,7 @@ const FirstSection = () => {
                   value={values.metric.cm}
                   inputName="cm"
                   unit="cm"
+                  className={styles.metric}
                 />
                 <InputText
                   label="Weight"
@@ -190,6 +191,7 @@ const FirstSection = () => {
                   value={values.metric.kg}
                   inputName="kg"
                   unit="kg"
+                  className={styles.metric}
                 />
               </div>
             ) : (
@@ -202,13 +204,14 @@ const FirstSection = () => {
                   value={values.imperial.ft}
                   inputName="ft"
                   unit="ft"
+                  className={styles.extraCustomStyle}
                 />
                 <InputText
                   setValue={handleValues}
                   value={values.imperial.inc}
                   inputName="inc"
                   unit="in"
-                  className={styles.customInputStyle}
+                  className={`${styles.customInputStyle} ${styles.extraCustomStyle}`}
                 />
                 <InputText
                   label="Weight"
@@ -216,13 +219,14 @@ const FirstSection = () => {
                   value={values.imperial.st}
                   inputName="st"
                   unit="st"
+                  className={styles.extraCustomStyle}
                 />
                 <InputText
                   setValue={handleValues}
                   value={values.imperial.lbs}
                   inputName="lbs"
                   unit="lbs"
-                  className={styles.customInputStyle}
+                  className={`${styles.customInputStyle} ${styles.extraCustomStyle}`}
                 />
               </div>
             )}

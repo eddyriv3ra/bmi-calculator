@@ -22,6 +22,12 @@
     left: 0;
   }
 
+  @include respond(xs) {
+    gap: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .boxText {
     display: flex;
     width: 564px;
@@ -36,9 +42,15 @@
       display: flex;
       justify-content: center;
       left: 0;
-      width: auto;
+      width: 100%;
       top: 0;
       position: relative;
+      padding: 0 39px;
+    }
+
+    @include respond(xs) {
+      width: 100%;
+      min-width: 327px;
     }
 
     .mainText {
@@ -57,6 +69,10 @@
         align-self: center;
         width: 350px;
       }
+
+      @include respond(md) {
+        width: 100%;
+      }
     }
 
     .mainDesc {
@@ -66,10 +82,15 @@
       line-height: var(--heading-line-height);
 
       @include respond(xl) {
-        width: 686px;
+        width: 100%;
         text-align: center;
         height: auto;
         line-height: var(--body-line-height);
+      }
+
+      @include respond(md) {
+        width: 100%;
+        padding: 0 24px;
       }
     }
   }
@@ -103,6 +124,10 @@
       top: 0;
     }
 
+    @include respond(sm) {
+      width: 328px;
+    }
+
     .calculatorContainer {
       display: flex;
       width: 564px;
@@ -115,6 +140,10 @@
       background: colors.$pureWhite;
       box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
 
+      @include respond(md) {
+        gap: 24px;
+      }
+
       .calcTitle {
         font-size: var(--heading-medium);
         font-weight: 600;
@@ -123,11 +152,15 @@
       }
 
       .formControl {
-        width: '100%';
+        width: 100%;
 
         .radioGroup {
-          width: '100%';
-          gap: 24;
+          width: 100%;
+          gap: 24px;
+
+          @include respond(md) {
+            justify-content: space-between;
+          }
 
           .radio {
             &:hover {
@@ -139,9 +172,19 @@
 
       .inputContainer {
         display: flex;
-        justify-content: space-between;
+        gap: 24px;
         width: 100%;
         flex-wrap: wrap;
+
+        @include respond(md) {
+          gap: 16px;
+        }
+
+        .metric {
+          @include respond(md) {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -150,6 +193,15 @@
 .customInputStyle {
   display: flex;
   align-items: flex-end;
+}
+
+.extraCustomStyle {
+  @include respond(sm) {
+    width: 122px;
+    align-items: normal;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 .animationMetric {
@@ -175,5 +227,15 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+.formControlLabel {
+  width: 238px;
+  margin: 0;
+  gap: 18px;
+
+  @include respond(md) {
+    width: auto;
   }
 }
