@@ -14,11 +14,11 @@
   @include respond(xl) {
     width: 335.5px;
     margin-bottom: 17px;
+    gap: 16px;
   }
 
   @include respond(md) {
     width: 327px;
-    gap: 16px;
   }
 }
 
