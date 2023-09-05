@@ -7,7 +7,7 @@ const SecondSection = () => {
       <div className={styles.leftSideContainer}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/image-bmi-guy.png"
+            src="./images/image-bmi-guy.png"
             alt="guy"
             className={styles.image}
             priority

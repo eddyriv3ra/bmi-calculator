@@ -39,7 +39,7 @@ const ThirdSection = () => {
               style={{ background: item.backgroundColor }}
             >
               <Image
-                src={`/images/${item.iconName}.svg`}
+                src={`./images/${item.iconName}.svg`}
                 width={32}
                 height={32}
                 alt="bowl-food-light"

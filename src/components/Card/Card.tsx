@@ -13,7 +13,7 @@ const Card = ({ title, description, iconName, customCardStyle }: ICard) => {
     <div className={`${styles.card} ${customCardStyle}`}>
       <div className={styles.cardTop}>
         <Image
-          src={`/images/${iconName}.svg`}
+          src={`./images/${iconName}.svg`}
           width={32}
           height={32}
           alt="gender"
