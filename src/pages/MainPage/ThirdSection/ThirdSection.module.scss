@@ -1,4 +1,5 @@
 @use '@/styles/abstracts/colors';
+@import '@/styles/abstracts/mixins';
 
 .thirdSection {
   display: flex;
@@ -6,13 +7,28 @@
   width: 1392px;
   margin-top: 96px;
   padding: 72px 117px 96px 116px;
-  height: 402px;
   border-radius: 35px;
   background: linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%);
   margin-bottom: 120px;
+  align-self: center;
+
+  @include respond(xl) {
+    flex-direction: column;
+    width: 100%;
+    padding: 60px 43px 60px 39px;
+    gap: 40px;
+    align-items: center;
+  }
 
   .item {
     width: 365px;
+
+    @include respond(xl) {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: 686px;
+    }
 
     .iconContainer {
       display: flex;
@@ -20,22 +36,27 @@
       align-items: center;
       width: 64px;
       height: 64px;
-      background-color: rgba(242, 30, 132, 0.15);
       border-radius: 50%;
+
+      @include respond(xl) {
+        min-width: 64px;
+      }
     }
 
-    .title {
-      font-size: var(--heading-medium);
-      font-weight: 600;
-      letter-spacing: -1.2px;
-      margin-bottom: 24px;
-      margin-top: 45px;
-    }
+    .rightContainer {
+      .title {
+        font-size: var(--heading-medium);
+        font-weight: 600;
+        letter-spacing: -1.2px;
+        margin-bottom: 24px;
+        margin-top: 45px;
+      }
 
-    .description {
-      font-size: var(--body-medium);
-      color: colors.$darkElectricBlue;
-      line-height: var(--body-line-height);
+      .description {
+        font-size: var(--body-medium);
+        color: colors.$darkElectricBlue;
+        line-height: var(--body-line-height);
+      }
     }
   }
 }

@@ -1,48 +1,110 @@
 @use '@/styles/abstracts/colors';
+@import '@/styles/abstracts/mixins';
 
 .fourth {
-  height: 1500px;
   width: 1150px;
+  align-self: center;
+  position: relative;
+  height: 700px;
 
-  .firstRow {
+  @include respond(xl) {
+    width: 686px;
+    text-align: center;
+    gap: 56px;
+  }
+
+  .limitations {
     display: flex;
-    gap: 132px;
+    width: 564px;
+    flex-direction: column;
+    gap: 35px;
 
-    .limitations {
-      display: flex;
-      width: 564px;
-      flex-direction: column;
-      height: max-content;
-      gap: 35px;
+    @include respond(xl) {
+      width: 686px;
+      min-width: 271px;
+      gap: 32px;
+      margin-bottom: 56px;
+    }
 
-      .title {
-        color: colors.$gunMetal;
-        font-size: var(--heading-large);
-        line-height: var(--heading-line-height);
-        letter-spacing: -2.4px;
-        font-weight: 600;
-      }
+    .title {
+      color: colors.$gunMetal;
+      font-size: var(--heading-large);
+      line-height: var(--heading-line-height);
+      letter-spacing: -2.4px;
+      font-weight: 600;
+    }
 
-      .description {
-        color: colors.$darkElectricBlue;
-        font-size: var(--body-medium);
-        line-height: var(--body-line-height);
-        width: 100%;
-      }
+    .description {
+      color: colors.$darkElectricBlue;
+      font-size: var(--body-medium);
+      line-height: var(--body-line-height);
+      width: 100%;
     }
   }
 
-  .secondRow {
-    display: flex;
-    justify-content: flex-end;
-    gap: 32px;
-    margin-top: 32px;
+  .cards {
+    @include respond(xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
   }
+}
 
-  .thirdRow {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-    gap: 32px;
+.gender {
+  position: absolute;
+  top: 0;
+  right: 62px;
+
+  @include respond(xl) {
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.age {
+  position: absolute;
+  right: 397px;
+  top: 280px;
+  @include respond(xl) {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.muscle {
+  position: absolute;
+  right: 0;
+  top: 280px;
+  @include respond(xl) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+.pregnancy {
+  position: absolute;
+  top: 512px;
+  right: 600px;
+  @include respond(xl) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+.race {
+  position: absolute;
+  top: 512px;
+  right: 197px;
+  @include respond(xl) {
+    position: relative;
+    top: 0;
+    right: 0;
   }
 }

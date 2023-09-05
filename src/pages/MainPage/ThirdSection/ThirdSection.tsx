@@ -42,11 +42,14 @@ const ThirdSection = () => {
                 src={`/images/${item.iconName}.svg`}
                 width={32}
                 height={32}
+                objectFit="contain"
                 alt="bowl-food-light"
               />
             </div>
-            <p className={styles.title}>{item.title}</p>
-            <p className={styles.description}>{item.description}</p>
+            <div className={styles.rightContainer}>
+              <p className={styles.title}>{item.title}</p>
+              <p className={styles.description}>{item.description}</p>
+            </div>
           </div>
         );
       })}

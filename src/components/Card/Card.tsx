@@ -5,11 +5,12 @@ interface ICard {
   title: string;
   description: string;
   iconName: string;
+  customCardStyle?: string;
 }
 
-const Card = ({ title, description, iconName }: ICard) => {
+const Card = ({ title, description, iconName, customCardStyle }: ICard) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${customCardStyle}`}>
       <div className={styles.cardTop}>
         <Image
           src={`/images/${iconName}.svg`}

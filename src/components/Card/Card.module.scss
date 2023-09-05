@@ -1,15 +1,20 @@
 @use '@/styles/abstracts/colors';
+@import '@/styles/abstracts/mixins';
 
 .card {
   display: flex;
   flex-direction: column;
   padding: 32px;
   width: 365px;
-  height: max-content;
   gap: 32px;
   border-radius: 16px;
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
   background: colors.$pureWhite;
+
+  @include respond(xl) {
+    width: 335.5px;
+    margin-bottom: 17px;
+  }
 }
 
 .cardTop {
@@ -30,4 +35,8 @@
   color: colors.$darkElectricBlue;
   font-size: var(--body-medium);
   line-height: var(--body-line-height);
+
+  @include respond(xl) {
+    width: 271px;
+  }
 }
