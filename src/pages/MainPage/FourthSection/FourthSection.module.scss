@@ -1,0 +1,48 @@
+@use '@/styles/abstracts/colors';
+
+.fourth {
+  height: 1500px;
+  width: 1150px;
+
+  .firstRow {
+    display: flex;
+    gap: 132px;
+
+    .limitations {
+      display: flex;
+      width: 564px;
+      flex-direction: column;
+      height: max-content;
+      gap: 35px;
+
+      .title {
+        color: colors.$gunMetal;
+        font-size: var(--heading-large);
+        line-height: var(--heading-line-height);
+        letter-spacing: -2.4px;
+        font-weight: 600;
+      }
+
+      .description {
+        color: colors.$darkElectricBlue;
+        font-size: var(--body-medium);
+        line-height: var(--body-line-height);
+        width: 100%;
+      }
+    }
+  }
+
+  .secondRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .thirdRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 32px;
+  }
+}

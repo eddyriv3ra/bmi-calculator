@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ThirdSection.module.scss';
 import Image from 'next/image';
 

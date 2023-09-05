@@ -1,0 +1,33 @@
+@use '@/styles/abstracts/colors';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  width: 365px;
+  height: max-content;
+  gap: 32px;
+  border-radius: 16px;
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  background: colors.$pureWhite;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .title {
+    font-size: var(--heading-small);
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: colors.$gunMetal;
+  }
+}
+
+.description {
+  width: 301px;
+  color: colors.$darkElectricBlue;
+  font-size: var(--body-medium);
+  line-height: var(--body-line-height);
+}

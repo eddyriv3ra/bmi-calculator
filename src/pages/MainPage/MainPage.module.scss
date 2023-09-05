@@ -1,49 +1,8 @@
 @use '@/styles/abstracts/colors';
 
-.second {
-  height: 533px;
-  position: relative;
+.mainContent {
   display: flex;
-  align-items: flex-end;
-  gap: 131px;
-  justify-content: center;
-  width: 1166px;
-  left: 22rem;
-
-  .leftSideContainer {
-    width: 564px;
-    height: 388px;
-    border-radius: 32px;
-    background: #e7f5fe;
-    position: relative;
-
-    .image {
-      position: absolute;
-      left: 48px;
-      bottom: 0;
-    }
-  }
-
-  .rightSideContainer {
-    width: 465px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: end;
-    padding-bottom: 31px;
-    gap: 35px;
-
-    .bmiResultMeans {
-      font-weight: 600;
-      line-height: var(--heading-line-height);
-      letter-spacing: -2.4px;
-      font-size: var(--heading-large);
-    }
-
-    .bmiDesc {
-      line-height: var(--body-line-height);
-      font-size: var(--body-medium);
-      color: colors.$darkElectricBlue;
-    }
-  }
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 120px;
 }
