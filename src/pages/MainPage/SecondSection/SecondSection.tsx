@@ -5,13 +5,18 @@ const SecondSection = () => {
   return (
     <div className={styles.second}>
       <div className={styles.leftSideContainer}>
-        <Image
-          src="/images/image-bmi-guy.png"
-          width={468}
-          height={533}
-          alt="guy"
-          className={styles.image}
-        />
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/images/image-bmi-guy.png"
+            // width={360}
+            // height={411}
+            alt="guy"
+            className={styles.image}
+            priority
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       </div>
       <div className={styles.rightSideContainer}>
         <p className={styles.bmiResultMeans}>What your BMI result means</p>
